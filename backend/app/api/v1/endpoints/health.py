@@ -1,9 +1,11 @@
 from fastapi import APIRouter
+
 from app.core.config import settings
 
 router = APIRouter()
 
-@router.get("/", tags = ["Health"])
+
+@router.get("/", tags=["Health"])
 def health_check():
     """
     Health check endpoint to verify if the API is running.
@@ -13,5 +15,5 @@ def health_check():
         "service": settings.APP_NAME,
         "version": settings.APP_VERSION,
         "environment": settings.APP_ENV,
-        "message": "AI Workspace API is running successfully."
+        "message": "AI Workspace API is running successfully.",
     }
