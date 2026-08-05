@@ -19,6 +19,7 @@ dependencies = [
     "pydantic-settings>=2.14.2",
     "python-dotenv>=1.2.2",
     "python-jose>=3.5.0",
+    "python-multipart>=0.0.32",
     "qdrant-client>=1.18.0",
     "redis>=8.0.1",
     "sqlalchemy>=2.0.51",
