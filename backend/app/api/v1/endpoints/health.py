@@ -3,7 +3,7 @@ from app.core.config import settings
 
 router = APIRouter()
 
-@router.get("/health", tags = ["Health"])
+@router.get("/", tags = ["Health"])
 def health_check():
     """
     Health check endpoint to verify if the API is running.
