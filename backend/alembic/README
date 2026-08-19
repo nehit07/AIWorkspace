@@ -1,0 +1,48 @@
+# Alembic Database Migrations
+
+Alembic is used in the AI Workspace backend to manage and version PostgreSQL database schema changes.
+
+It works together with SQLAlchemy models to generate migration files and apply those changes to the PostgreSQL database.
+
+---
+
+## Migration Flow
+
+The overall migration workflow is:
+
+SQLAlchemy Model
+        ↓
+Base.metadata
+        ↓
+Alembic Autogenerate
+        ↓
+Migration File
+        ↓
+Alembic Upgrade
+        ↓
+PostgreSQL Database
+
+For example:
+
+User SQLAlchemy Model
+        ↓
+Base.metadata
+        ↓
+Alembic detects the new User model
+        ↓
+Migration file is generated
+        ↓
+Migration is applied
+        ↓
+`users` table is created in PostgreSQL
+
+---
+
+# 1. Alembic Setup
+
+Alembic was initialized from the `backend` directory.
+
+Run:
+
+```bash
+uv run alembic init alembic

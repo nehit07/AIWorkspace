@@ -33,3 +33,6 @@ dev = [
     "pytest-asyncio>=1.4.0",
     "ruff>=0.16.0",
 ]
+
+[tool.ruff]
+lint.ignore = ["B008"]
